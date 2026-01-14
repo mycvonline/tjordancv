@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thomas Jordan — CV</title>
+  <meta name="description" content="Thomas Jordan — Enterprise Account Manager / Account Executive (SaaS) CV" />
+  <style>
+    :root{
+      --bg1:#0b1020;
+      --bg2:#111827;
+      --card:#ffffff;
+      --ink:#0f172a;
+      --muted:#475569;
+      --line:#e5e7eb;
+      --chip:#f1f5f9;
+      --accent:#2563eb;
+      --soft:#f8fafc;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--ink);
+      background: radial-gradient(1200px 600px at 15% 0%, rgba(37,99,235,.25), transparent 60%),
+                  radial-gradient(1200px 600px at 95% 10%, rgba(99,102,241,.20), transparent 55%),
+                  linear-gradient(180deg, var(--bg1), var(--bg2));
+      padding: 22px;
+    }
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width: 1040px; margin: 0 auto;}
+    .topbar{
+      display:flex; gap:10px; flex-wrap:wrap;
+      justify-content:flex-end; align-items:center;
+      margin-bottom: 14px;
+    }
+    .btn{
+      appearance:none; border:1px solid rgba(255,255,255,.22);
+      background: rgba(255,255,255,.10);
+      color: #fff;
+      padding: 10px 12px;
+      border-radius: 12px;
+      font-weight: 650;
+      cursor:pointer;
+      display:inline-flex; align-items:center; gap:8px;
+      transition: transform .05s ease, background .2s ease, border-color .2s ease;
+      white-space: nowrap;
+    }
+    .btn:hover{ background: rgba(255,255,255,.16); border-color: rgba(255,255,255,.30); text-decoration:none; }
+    .btn:active{ transform: translateY(1px); }
+    .btn.secondary{ background: rgba(255,255,255,.06); }
+
+    .card{
+      background: var(--card);
+      border-radius: 18px;
+      box-shadow: 0 16px 55px rgba(0,0,0,.35);
+      overflow:hidden;
+      border: 1px solid rgba(255,255,255,.08);
+    }
+    .header{
+      padding: 28px 28px 18px 28px;
+      border-bottom: 1px solid var(--line);
+      background: #fff;
+    }
+
+    /* PHOTO + NAME ROW */
+    .profile-wrap{
+      display:flex;
+      align-items:center;
+      gap:18px;
+      justify-content:space-between;
+      flex-wrap:wrap;
+    }
+    .profile-left{
+      display:flex;
+      align-items:center;
+      gap:18px;
+      flex: 1 1 auto;
+      min-width: 280px;
+    }
+    .profile-photo{
+      width:110px;
+      height:110px;
+      border-radius:50%;
+      object-fit:cover;
+      border:3px solid #e5e7eb;
+      flex-shrink:0;
+      background:#fff;
+    }
+    h1{
+      margin:0;
+      font-size: 34px;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+    .headline{
+      margin: 8px 0 0 0;
+      color: var(--muted);
+      font-weight: 650;
+      font-size: 15px;
+    }
+    .contacts{
+      display:flex; flex-wrap:wrap; gap:10px;
+      margin-top: 14px;
+    }
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      background: var(--chip);
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      border-radius: 999px;
+      font-size: 14px;
+      color: var(--ink);
+      white-space:nowrap;
+    }
+    .pill a{color:inherit}
+    .pill a:hover{text-decoration:underline}
+
+    .content{
+      padding: 22px 28px 28px 28px;
+      display:grid;
+      grid-template-columns: 1.35fr .65fr;
+      gap: 18px;
+      background: #fff;
+    }
+    @media (max-width: 920px){
+      .content{grid-template-columns: 1fr}
+    }
+    @media (max-width: 600px){
+      .profile-photo{ width:90px; height:90px; }
+    }
+
+    section{
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 16px 16px 14px 16px;
+      background: var(--soft);
+    }
+    .section-title{
+      margin: 0 0 10px 0;
+      font-size: 13px;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+      color: #0f172a;
+    }
+    .summary{
+      margin:0;
+      line-height: 1.6;
+      font-size: 15px;
+      color: var(--ink);
+    }
+
+    .exp-block{
+      padding: 14px 14px 12px 14px;
+      border:1px solid var(--line);
+      border-radius: 14px;
+      background:#fff;
+    }
+    .exp-block + .exp-block{margin-top: 12px;}
+    .exp-header{
+      display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-start;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .exp-role{
+      margin:0;
+      font-weight: 800;
+      font-size: 16px;
+      line-height: 1.25;
+    }
+    .exp-meta{
+      margin: 2px 0 0 0;
+      color: var(--muted);
+      font-size: 13.5px;
+      line-height: 1.35;
+    }
+    .exp-dates{
+      color: var(--muted);
+      font-size: 13.5px;
+      font-weight: 650;
+      white-space:nowrap;
+    }
+    ul{margin: 10px 0 0 0; padding-left: 18px;}
+    li{margin: 7px 0; line-height: 1.45; font-size: 14.5px;}
+    .chips{display:flex; flex-wrap:wrap; gap:8px;}
+    .chip{background: var(--chip); border: 1px solid var(--line); padding: 6px 10px; border-radius: 999px; font-size: 13px;}
+    .kv{display:grid; grid-template-columns: 1fr; gap: 10px;}
+    .kv .item{padding: 10px 10px; border-radius: 12px; border: 1px solid var(--line); background: #fff;}
+    .kv .label{font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 4px;}
+    .kv .value{font-size: 14px; font-weight: 650; line-height: 1.35;}
+    .note{color: var(--muted); font-size: 13px; margin-top: 10px;}
+    .footer-note{
+      padding: 14px 28px 24px 28px;
+      color: rgba(255,255,255,.80);
+      font-size: 13px;
+      text-align:center;
+    }
+    .print-only{display:none}
+
+    /* PRINT / PDF */
+    @media print{
+      body{ background:#fff; padding:0; }
+      .topbar, .footer-note{ display:none !important; }
+      .wrap{ max-width: none; margin:0; }
+      .card{ border-radius: 0; box-shadow: none; border:none; }
+      .header{ padding: 18px 18px 12px 18px; }
+      .content{ padding: 14px 18px 18px 18px; gap: 12px; }
+      section{ background:#fff; }
+      .exp-block{ break-inside: avoid; }
+      a{ color:#0f172a; text-decoration:none; }
+      .print-only{ display:block; }
+
+      /* If you prefer the photo hidden on PDF, uncomment next lines:
+      .profile-photo{ display:none; }
+      */
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <button class="btn" id="downloadPdfBtn" type="button" title="Download as PDF">
+        ⬇️ Download PDF
+      </button>
+      <a class="btn secondary" href="mailto:ogtjordan@gmail.com?subject=Role%20opportunity%20-%20Thomas%20Jordan" title="Email Thomas">
+        ✉️ Email
+      </a>
+      <a class="btn secondary" href="tel:+61406389681" title="Call Thomas">
+        📞 Call
+      </a>
+      <a class="btn secondary" href="https://www.linkedin.com/in/thomasjordanuk/" target="_blank" rel="noopener" title="Open LinkedIn">
+        in LinkedIn
+      </a>
+    </div>
+
+    <main class="card" role="main" aria-label="CV">
+      <header class="header">
+        <div class="profile-wrap">
+          <div class="profile-left">
+            <!-- Put your photo file in the SAME folder as index.html and name it: thomas.jpg -->
+            <img src="thomas.jpg" alt="Thomas Jordan" class="profile-photo" />
+            <div>
+              <h1>Thomas Jordan</h1>
+              <p class="headline">Enterprise Account Manager / Account Executive | Mid-Market &amp; Enterprise SaaS</p>
+            </div>
+          </div>
+          <div class="print-only" style="text-align:right; font-size:13px; color:var(--muted);">
+            Melbourne, VIC
+          </div>
+        </div>
+
+        <div class="contacts" aria-label="Contact details">
+          <span class="pill">📍 Melbourne, VIC (Prahran)</span>
+          <span class="pill">📞 <a href="tel:+61406389681">0406 389 681</a></span>
+          <span class="pill">✉️ <a href="mailto:ogtjordan@gmail.com">ogtjordan@gmail.com</a></span>
+          <span class="pill">🔗 <a href="https://www.linkedin.com/in/thomasjordanuk/" target="_blank" rel="noopener">linkedin.com/in/thomasjordanuk</a></span>
+        </div>
+      </header>
+
+      <div class="content">
+        <!-- LEFT COLUMN -->
+        <div>
+          <section>
+            <h2 class="section-title">Professional Summary</h2>
+            <p class="summary">
+              Account Manager &amp; Account Executive with 6 years’ experience across outbound pipeline generation, new business, renewals,
+              and expansion in mid-market and enterprise SaaS. Owned a $2.5M ARR book of business spanning ≅45 accounts across legal,
+              consulting, accounting, and professional services, delivering 96% retention and the lowest churn globally in 2024–2025.
+              Proven in multi-stakeholder buying committees (10+), MEDDIC/MEDDPICC qualification, and leading complex platform transitions.
+              Melbourne-based and focused on enterprise &amp; Mid Market account acquisition/growth through land-and-expand and value-driven
+              commercial execution.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="section-title">Professional Experience</h2>
+
+            <div class="exp-block">
+              <div class="exp-header">
+                <div>
+                  <p class="exp-role">Account Manager — Introhive</p>
+                  <p class="exp-meta">Relationship Intelligence Platform | Mid-Market &amp; Enterprise SaaS (Legal, Consulting &amp; Professional Services)</p>
+                </div>
+                <div class="exp-dates">Oct 2024 – Oct 2025</div>
+              </div>
+              <ul>
+                <li>Owned and grew a $2.5M ARR portfolio of 45 mid-market and enterprise accounts, balancing renewals and expansion/new business across legal, accounting, consulting, AEC, and professional services.</li>
+                <li>Delivered 96% retention, achieving the lowest churn globally in 2024 and 2025, and completing the highest volume of renewals globally in 2025.</li>
+                <li>Led land-and-expand motions through Joint Success Plans, identifying upsell pathways and executing commercial uplift at renewal.</li>
+                <li>Advised clients through complex CRM and technology transformation programs; led migration of 45 accounts from legacy to platform solution.</li>
+                <li>Managed senior stakeholders including CMOs, Heads of Business Development, and Heads of Clients &amp; Markets, aligning outcomes across multiple internal teams.</li>
+                <li>Negotiated multi-year (typically 3-year) enterprise contracts with PUPM pricing under stringent procurement and budget scrutiny.</li>
+              </ul>
+              <div class="note">Key customers include: Womble Bond Dickinson, Aztec Group, Foster + Partners.</div>
+            </div>
+
+            <div class="exp-block">
+              <div class="exp-header">
+                <div>
+                  <p class="exp-role">Account Executive — Introhive</p>
+                  <p class="exp-meta">Mid-Market &amp; Enterprise SaaS | Full-cycle ownership</p>
+                </div>
+                <div class="exp-dates">Sep 2023 – Oct 2024</div>
+              </div>
+              <ul>
+                <li>Ran full sales cycles (average 6 months) across mid-market and enterprise professional services organisations.</li>
+                <li>Worked to an annual target of $1.2M AUD; closed largest deal of $660K AUD in a competitive environment with rigorous approval processes.</li>
+                <li>Navigated complex buying committees of 10+ stakeholders, applying MEDDIC to qualify, build consensus, and progress deals across multiple use cases.</li>
+                <li>Generated pipeline through multi-channel prospecting including LinkedIn, cold calling, video, email, events, referrals, and inbound enquiries.</li>
+                <li>Ran initial demos and partnered with SE’s &amp; Business Consults to deliver technical, financial, and strategic validation of proposed solutions.</li>
+              </ul>
+            </div>
+
+            <div class="exp-block">
+              <div class="exp-header">
+                <div>
+                  <p class="exp-role">Strategic SDR (Sole) — Introhive</p>
+                  <p class="exp-meta">Largest and most strategic accounts | Pure outbound</p>
+                </div>
+                <div class="exp-dates">Jun 2022 – Sep 2023</div>
+              </div>
+              <ul>
+                <li>Sole Strategic SDR responsible for establishing interest with Introhive’s largest and most strategically important accounts.</li>
+                <li>Overachieved quarterly targets consistently; ranked top-performing SDR each month for meetings handed to sales and telephone activity.</li>
+                <li>Awarded SDR of the Quarter (Q3) and recognised for most meetings booked/delivered (Q4). Awarded Introhive Values award for Embracing Change.</li>
+                <li>Generated buyer interest with top IT Services and Consulting firms through outbound multi-channel prospecting (email, LinkedIn, phone, video, events, referrals).</li>
+                <li>Ran opportunities to handover using MEDDPICC, fully qualifying deals and leveraging Solutions Engineers for early-stage demos prior to AE handover.</li>
+                <li>Identified and multithreaded key stakeholders across early and mid-stage opportunities to increase conversion and deal velocity. Ran multiple Champion Tracking and Social Selling workshops, identifying methods of finding high quality leads on LinkedIn.</li>
+                <li>Owned the continual improvement of global cold calling strategy; founded and led “Operation Bullseye,” coaching and incentivising calling power hours across the global BDR organisation.</li>
+                <li>Delivered enablement sessions to 20+ SDRs on video prospecting and outbound best practices; awarded “Cold Call King” for FY2022.</li>
+              </ul>
+            </div>
+
+            <div class="exp-block">
+              <div class="exp-header">
+                <div>
+                  <p class="exp-role">Sales Development Representative — Introhive</p>
+                </div>
+                <div class="exp-dates">Mar 2021 – Jun 2022</div>
+              </div>
+              <ul>
+                <li>Overperformed SDR quota while completing the most dials globally for FY2021.</li>
+                <li>Consistently generated top-of-funnel pipeline for mid-market and enterprise segments which progressed past Stage 3 opportunities.</li>
+                <li>Ran internal workshops to uplift outbound effectiveness and qualification standards across the team, including email personalisation, objection handling, list preparation.</li>
+              </ul>
+            </div>
+
+            <div class="exp-block">
+              <div class="exp-header">
+                <div>
+                  <p class="exp-role">Sales Development Representative (EMEA) — YOOBIC</p>
+                </div>
+                <div class="exp-dates">Sep 2020 – Mar 2021</div>
+              </div>
+              <ul>
+                <li>Only SDR for the EMEA region.</li>
+                <li>Helped create the SDR playbook and onboard a new hire, establishing foundational outbound processes and messaging standards.</li>
+              </ul>
+            </div>
+
+            <div class="exp-block">
+              <div class="exp-header">
+                <div>
+                  <p class="exp-role">District Manager (Inside Sales) — ADP</p>
+                </div>
+                <div class="exp-dates">Aug 2019 – Sep 2020</div>
+              </div>
+              <ul>
+                <li>Managed inbound leads for SMB accounts from discovery through to contract close.</li>
+                <li>Owned full inside sales cycle including qualification, proposal, negotiation, and close.</li>
+              </ul>
+            </div>
+
+            <div class="exp-block">
+              <div class="exp-header">
+                <div>
+                  <p class="exp-role">Market Analyst (Placement) — Unilever</p>
+                </div>
+                <div class="exp-dates">Jun 2017 – Jul 2017</div>
+              </div>
+              <ul>
+                <li>Owned the deployment of a new Product Information Management (PIM) system.</li>
+                <li>Partnered cross-functionally to support data quality, governance, and rollout success.</li>
+              </ul>
+            </div>
+
+          </section>
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <aside>
+          <section>
+            <h2 class="section-title">Core Strengths</h2>
+            <div class="chips" aria-label="Core strengths">
+              <span class="chip">Enterprise Account Management</span>
+              <span class="chip">Land &amp; Expand Strategy</span>
+              <span class="chip">Renewals &amp; Retention</span>
+              <span class="chip">New Business Development</span>
+              <span class="chip">Outbound Prospecting</span>
+              <span class="chip">MEDDIC / MEDDPICC</span>
+              <span class="chip">Joint Success Plans</span>
+              <span class="chip">Multi-threading</span>
+              <span class="chip">Stakeholder Management</span>
+              <span class="chip">Negotiation</span>
+              <span class="chip">CRM &amp; Platform Transformation</span>
+              <span class="chip">Executive Alignment</span>
+              <span class="chip">Forecasting</span>
+            </div>
+          </section>
+
+          <section>
+            <h2 class="section-title">Technology</h2>
+            <div class="chips" aria-label="Technology stack">
+              <span class="chip">Salesforce</span>
+              <span class="chip">HubSpot</span>
+              <span class="chip">Gong</span>
+              <span class="chip">Outreach</span>
+              <span class="chip">Vidyard</span>
+              <span class="chip">LinkedIn Sales Navigator</span>
+              <span class="chip">ZoomInfo</span>
+              <span class="chip">Lusha</span>
+              <span class="chip">Phantombuster</span>
+              <span class="chip">Clay</span>
+              <span class="chip">Trumpet</span>
+              <span class="chip">Notion</span>
+              <span class="chip">Trello</span>
+              <span class="chip">Google Docs</span>
+              <span class="chip">Google Sheets</span>
+              <span class="chip">Introhive</span>
+            </div>
+          </section>
+
+          <section>
+            <h2 class="section-title">Education</h2>
+            <div class="kv">
+              <div class="item">
+                <div class="label">University of Bath</div>
+                <div class="value">BSc International Management (2:1) — 2014–2018</div>
+              </div>
+              <div class="item">
+                <div class="label">Royal Grammar School, Guildford</div>
+                <div class="value">A Levels: A* A* A • GCSEs: 9 A* / A</div>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2 class="section-title">Training</h2>
+            <div class="kv">
+              <div class="item">
+                <div class="label">Sales</div>
+                <div class="value">Sandler Sales Training</div>
+              </div>
+              <div class="item">
+                <div class="label">Sales Development</div>
+                <div class="value">Chris Ritson — SDR to AE Program</div>
+              </div>
+              <div class="item">
+                <div class="label">Coaching</div>
+                <div class="value">Student Breakthrough Coaching Program</div>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2 class="section-title">Work Rights</h2>
+            <div class="kv">
+              <div class="item">
+                <div class="label">Visa</div>
+                <div class="value">Working Holiday Visa (Subclass 417) — Valid 3 years</div>
+              </div>
+            </div>
+          </section>
+        </aside>
+      </div>
+    </main>
+
+    <div class="footer-note">
+      Click <strong>Download PDF</strong> → choose <em>Save as PDF</em>. All contact links are clickable.
+    </div>
+  </div>
+
+  <script>
+    // "Download PDF" via the browser's Print -> Save as PDF
+    document.getElementById("downloadPdfBtn").addEventListener("click", () => {
+      window.print();
+    });
+  </script>
+</body>
+</html>
